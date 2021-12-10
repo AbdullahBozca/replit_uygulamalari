@@ -1,6 +1,7 @@
 package replit_uygulamalari_list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class List_04 {
 
@@ -14,21 +15,15 @@ public class List_04 {
 		// OUTPUT :
 
 		// [Veli,Omer]
-		String arr[] = { "Ali", "Veli", "Ayse", "Fatma", "Omer" };
-		ArrayList<String> list = new ArrayList<String>();
-		String silenecek="a";
-		for (int i = 0; i < arr.length; i++) {
-			list.add(arr[i]);
-		}
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i).equalsIgnoreCase(silenecek));
-			if (list.get(i).equalsIgnoreCase	(silenecek)) {
-				System.out.println(list.get(i));
-				list.remove(i);
-				i--;
+		ArrayList<String> listIsimler=new ArrayList<String>(Arrays.asList("Ali","Veli","Ayse","Fatma","Omer"));
+    	ArrayList<String> list2=new ArrayList<String>();
+    	System.out.println(listIsimler);
+    	for (String a: listIsimler) {
+			if (!a.toLowerCase().contains("a")) {
+				list2.add(a);
 			}
 		}
-		System.out.println(list);
+    	System.out.println(list2);
 	}
 
 }

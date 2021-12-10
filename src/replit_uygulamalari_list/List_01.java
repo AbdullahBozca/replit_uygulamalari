@@ -18,25 +18,25 @@ public class List_01 {
 
 		// maximum occurring character is : a
 
-			String cumle = "Learning java is easy";
-			String arr[] = cumle.split("");
-			int count = 0;
-			int enCok = 0;
-			char enCokHarf = ' ';
-			for (int i = 0; i < arr.length; i++) {
-				for (int j = 0; j < arr.length; j++) {
-					if (arr[i].contains(arr[j])) {
-						count++;
+					String cumle = "Learning java is easy";
+					String arr[] = cumle.split("");
+					int count = 0;
+					int enCok = 0;
+					char enCokHarf = ' ';
+					for (int i = 0; i < arr.length; i++) {
+						for (int j = 0; j < arr.length; j++) {
+							if (arr[i].contains(arr[j])) {
+								count++;
+							}
+			
+						}
+						if (count > enCok) {
+							enCok = count;
+							enCokHarf = arr[i].charAt(0);
+						}
+						count = 0;
 					}
-	
-				}
-				if (count > enCok) {
-					enCok = count;
-					enCokHarf = arr[i].charAt(0);
-				}
-				count = 0;
-			}
-			System.out.println("maximum occurring character is : "+enCokHarf);
+					System.out.println("maximum occurring character is : "+enCokHarf);
 		}
 
 }
